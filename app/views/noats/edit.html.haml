@@ -1,6 +1,6 @@
 .container.white.shadow
   %h3.gray Edit noat
   = form_for(@noat) do |f|
-    = f.text_field :title
-    = f.text_area  :description
-    = f.submit 'Update your noat', class: 'button primary'
+    %p= f.text_field :title
+    %p= f.text_field  :description
+    %p= f.submit 'Update your noat', class: 'button primary'

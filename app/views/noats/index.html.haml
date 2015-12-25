@@ -11,7 +11,7 @@
         = noat.description 
 
     .actions  
-      %span.action.edit
-        = link_to "Edit", edit_noat_path(noat.id)
-      %span.action.delete
-        = link_to "Delete", { action: 'destroy', id: noat.id }, method: :delete
+      %span.action.edit.small
+        = link_to "Edit", edit_noat_path(noat.id), class: 'button outline'
+      %span.action.delete.small
+        = link_to "Delete", { action: 'destroy', id: noat.id }, method: :delete, class: 'button outline'

@@ -49,9 +49,18 @@ a
   top: 0.5em
 
 .button
-  padding: 0.5em 1em 
+  cursor: pointer
+  padding: 0.6em 1em 
   border: 2px solid
   border-radius: 4px 
+  &.primary
+    background: $red
+    border-color: $red
+    color: white
+    &:hover 
+      background: $green
+      border-color: $green
+      color: white
   &.primary.reversed
     background: $red
     border-color: white
@@ -83,13 +92,17 @@ a
   transform: translateY(-50%)
 
 .edit, .delete
-  color: $light-gray !important
+  color: $subtle-gray 
 
 .noat:hover
   .action.edit
-    color: $gray !important
+    color: $light-gray
+    &:hover
+      color: $green
   .action.delete
-    color: $red !important
+    color: $light-gray
+    &:hover
+      color: $red
 
 .action + .action 
   margin-left: 0.6em  

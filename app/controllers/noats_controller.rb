@@ -25,7 +25,7 @@ class NoatsController < ApplicationController
   def destroy
     @noat = Noat.find(params[:id])
     @noat.destroy
-    redirect_to noats_path
+    redirect_to root_path
   end
 
   private

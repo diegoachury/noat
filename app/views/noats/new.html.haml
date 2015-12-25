@@ -3,4 +3,4 @@
   = form_for(@noat) do |f|
     %p= f.text_field :title, :placeholder => "Add new item"
     %p= f.text_field :description, :placeholder => "description"
-    %p= f.submit
+    %p= f.submit 'Create public noat', class: 'button primary'
