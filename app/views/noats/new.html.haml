@@ -1,6 +1,6 @@
 .container.white.shadow
   %h3.gray Create a new Noat
-  = form_for(@todo) do |f|
-    %p= f.text_field :item, :placeholder => "Add new item"
+  = form_for(@noat) do |f|
+    %p= f.text_field :title, :placeholder => "Add new item"
     %p= f.text_field :description, :placeholder => "description"
     %p= f.submit

@@ -10,10 +10,10 @@
   %body
     .container.title-bar
       %h1.logo
-        =link_to 'Noat', todos_path
+        =link_to 'Noat', noats_path
     
-      - if content_for? :new_todo 
+      - if content_for? :new_noat
         .new
-          = yield :new_todo
+          = yield :new_noat
 
     = yield

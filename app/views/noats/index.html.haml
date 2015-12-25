@@ -1,0 +1,17 @@
+- content_for :new_noat do 
+  = link_to "+ New", new_noat_path, class: 'button primary reversed shadow'
+
+- @noats.reverse_each do |noat|
+  .container.white.shadow.santa.grow.noat
+    %p
+      %span.light
+        = noat.title
+      %br
+      %span.small.gray
+        = noat.description 
+
+    .actions  
+      %span.action.edit
+        = link_to "Edit", edit_noat_path(noat.id)
+      %span.action.delete
+        = link_to "Delete", { action: 'destroy', id: noat.id }, method: :delete
