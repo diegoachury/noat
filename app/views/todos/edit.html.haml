@@ -1,0 +1,6 @@
+.container.white.shadow
+  %h3.gray Edit todo
+  = form_for(@todo) do |f|
+    = f.text_field :item
+    = f.text_area  :description
+    = f.submit 'Update your noat', class: 'button primary'

@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Noat
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+    .container.title-bar
+      %h1.logo
+        =link_to 'Noat', todos_path
+    
+      - if content_for? :new_todo 
+        .new
+          = yield :new_todo
+
+    = yield

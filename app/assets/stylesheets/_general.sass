@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans)
+
+body 
+  font-family: 'Work Sans', sans-serif
+  background: $primary
+
+div     
+  box-sizing: border-box
+
+.container
+  position: relative
+  max-width: 50em
+  margin: 0 auto
+  &.white
+    background: white
+    padding: 0.2em 1.3em
+
+    + .container.white 
+      border-top: 1px solid $subtle-gray
+
+.grow
+  transform: none
+  transition: transform 0.2s ease
+  &:hover
+    z-index: 10
+    transform: scale(1.08) translateY(-0.1em)
+
+.shadow
+  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1)
+
+.grow.shadow
+  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.0)
+  transition: all 0.2s ease
+  &:hover
+    box-shadow: 0px 15px 45px 0px rgba(0,0,0,0.15)
+
+
+.title-bar 
+  color: white
+  margin: 3em auto
+
+a 
+  color: inherit
+  text-decoration: none
+
+.new 
+  position: absolute
+  right: 0
+  top: 0.5em
+
+.button
+  padding: 0.5em 1em 
+  border: 2px solid
+  border-radius: 4px 
+  &.primary.reversed
+    background: $red
+    border-color: white
+    color: white
+    &:hover 
+      background: white
+      border-color: white
+      color: $green
+
+.logo
+  padding-left: 0.9em
+.logo:before
+  top: 0.1em
+  left: 0
+  position: absolute 
+  height: 1em
+  width: 1em
+  display: inline-block
+  content: ''
+  background-image: url('data:image/svg+xml;utf8,<svg width="152px" height="256px" viewBox="0 0 152 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"> <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch --> <title>Shape</title> <desc>Created with Sketch.</desc> <defs></defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="geomicons-wired" sketch:type="MSLayerGroup" transform="translate(-53.000000, -6656.000000)" fill="#FFFFFF"> <path d="M196.713,6765.464 C192.739,6757.689 187.383,6750.587 181,6744.586 L181,6703.496 C187.9,6701.72 193,6695.455 193,6688 L193,6672 C193,6663.163 185.837,6656 177,6656 L81,6656 C72.163,6656 65,6663.163 65,6672 L65,6688 C65,6695.455 70.1,6701.72 77,6703.496 L77,6744.586 C70.617,6750.587 65.26,6757.689 61.287,6765.464 C55.865,6776.075 53,6788.018 53,6800 C53,6808.837 60.163,6816 69,6816 L105,6816 L105,6848 L129,6912 L153,6848 L153,6816 L189,6816 C197.837,6816 205,6808.837 205,6800 C205,6788.018 202.135,6776.075 196.713,6765.464 L196.713,6765.464 Z M81,6672 L177,6672 L177,6688 L81,6688 L81,6672 L81,6672 Z M165,6744 L93,6744 L93,6696 L165,6696 L165,6744 L165,6744 Z M137,6845.099 L129,6866.433 L121,6845.099 L121,6816 L137,6816 L137,6845.099 L137,6845.099 Z M69,6800 C69,6780.372 78.427,6763 92.999,6752 L165.001,6752 C179.572,6763 189,6780.372 189,6800 L69,6800 L69,6800 Z" id="Shape" sketch:type="MSShapeGroup"></path> </g> </g> </svg>')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: left middle  
+
+.actions 
+  position: absolute
+  right: 1em
+  top: 50%
+  transform: translateY(-50%)
+
+.edit, .delete
+  color: $light-gray !important
+
+.todo:hover
+  .action.edit
+    color: $gray !important
+  .action.delete
+    color: $red !important
+
+.action + .action 
+  margin-left: 0.6em  
